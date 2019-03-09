@@ -3,7 +3,7 @@
     "description": "Laravel package for shortening urls - local driver",
     "type": "library",
     "require": {
-        "webpatser/laravel-uuid":"^3.0"
+        "pascaldevink/shortuuid": "^2.1"
     },
     "authors": [
         {

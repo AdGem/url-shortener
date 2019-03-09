@@ -2,7 +2,7 @@
 
 namespace QEDTeam\UrlShortener;
 
-use Webpatser\Uuid\Uuid;
+use PascalDeVink\ShortUuid\ShortUuid;
 use QEDTeam\UrlShortener\Url;
 
 /**
@@ -24,7 +24,7 @@ class Shortener
         $url = new Url;
 
         $url->original_url = $_url;
-        $url->code = Uuid::generate()->string;
+        $url->code = ShortUuid::uuid1();
 
         $url->save();
 
