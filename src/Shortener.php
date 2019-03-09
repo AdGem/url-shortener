@@ -12,6 +12,15 @@ class Shortener
 {
     public function make($_url)
     {
+        $code = $this->makeCode($_url);
+
+        $shortUrl = config('app.url') . '/' . config('url_shortener.default_url_path') . '/' . $code;
+
+        return $shortUrl;
+    }
+
+    public function makeCode($_url)
+    {
         $url = new Url;
 
         $url->original_url = $_url;
