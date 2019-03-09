@@ -1,0 +1,19 @@
+{
+    "name": "qedteam/url-shortener",
+    "description": "Laravel package for shortening urls - local driver",
+    "type": "library",
+    "require": {
+        "webpatser/laravel-uuid":"^3.0"
+    },
+    "authors": [
+        {
+            "name": "Anto Čabraja",
+            "email": "cabraja.anto@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "QEDTeam\\UrlShortener\\": "src/"
+        }
+    }
+}
