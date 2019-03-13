@@ -24,11 +24,12 @@ class UrlShortenerSeviceProvider extends ServiceProvider
 
     private function publish()
     {
-        $publish = [
+        $this->publishes([
             __DIR__.'/../../config/url_shortener.php' => config_path('url_shortener.php'),
-            __DIR__ . '/../../database/migrations/' => database_path('migrations')
-        ];
+        ], 'config');
 
-        $this->publishes($publish);
+        $this->publishes([
+            __DIR__ . '/../../database/migrations/' => database_path('migrations')
+        ], 'migrations');
     }
 }
