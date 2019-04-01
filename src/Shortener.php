@@ -27,7 +27,7 @@ class Shortener
 
     public function getUrl($code)
     {
-        return $this->algorithm->getRecord($code)->url ?? null;
+        return $this->algorithm->getRecord($code)->original_url ?? null;
     }
 
     public function getCode($_url, $new)
