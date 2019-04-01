@@ -15,6 +15,10 @@ class UrlShortenerSeviceProvider extends ServiceProvider
 
         // Publish all configs and migrations
         $this->publish();
+
+        \QEDTeam\UrlShortener\Url::creating(function ($url) {
+            $url->original_url = base64_encode($url->original_url);
+        });
     }
 
     public function register()

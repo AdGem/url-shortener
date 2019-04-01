@@ -33,4 +33,16 @@ return [
      * selected url.
      */
     'always_new' => false,
+
+    /*
+     * shortuuid - https://github.com/pascaldevink/shortuuid
+     * hashids - https://github.com/ivanakimov/hashids.php
+     */
+    'algorithm' => 'shortuuid',
+
+    /*
+     * It will be used for creating hash from algorithm. You can generate API KEY
+     * or use project name. It must be unique and unchangable after first instalation
+     */
+    'algorithm_hash' => 'My Project',
 ];

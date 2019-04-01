@@ -2,26 +2,32 @@
 
 namespace QEDTeam\UrlShortener;
 
-use PascalDeVink\ShortUuid\ShortUuid;
-use QEDTeam\UrlShortener\Url;
+use QEDTeam\UrlShortener\Algorithms\Algorithm;
 
 /**
  *
  */
 class Shortener
 {
+    private $algorithm;
+
+    public function __construct()
+    {
+        $this->algorithm = (new Algorithm())->get();
+    }
+
     public function make($_url)
     {
         $code = $this->getCode($_url, config('url_shortener.always_new'));
 
-        $shortUrl = config('app.url') . '/' . config('url_shortener.default_url_path') . '/' . $code;
+        $shortUrl = config('url_shortener.app_url') . '/' . config('url_shortener.default_url_path') . '/' . $code;
 
         return $shortUrl;
     }
 
     public function getUrl($code)
     {
-        return Url::getByCode($code);
+        return $this->algorithm->getRecord($code)->url ?? null;
     }
 
     public function getCode($_url, $new)
@@ -35,19 +41,14 @@ class Shortener
 
     private function createCode($_url)
     {
-        $url = new Url;
-
-        $url->original_url = $_url;
-        $url->code = ShortUuid::uuid1();
-
-        $url->save();
+        $url = $this->algorithm->createRecord($_url);
 
         return $url->code;
     }
 
     private function createCodeIfNotExists($_url)
     {
-        if ($url = Url::whereOriginalUrl($_url)->latest()->first()) {
+        if ($url = Url::findByUrl($_url)) {
             return $url->code;
         }
 
