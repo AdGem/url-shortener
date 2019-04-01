@@ -3,7 +3,7 @@
 namespace QEDTeam\UrlShortener\Middleware;
 
 use Closure;
-use QEDTeam\UrlShortener\Url;
+use QEDTeam\UrlShortener\Shortener;
 
 class UrlShortener
 {
@@ -18,8 +18,8 @@ class UrlShortener
     {
         $default = config('url_shortener.default_url_path');
 
-        if ($request->is("$default/*") and $request->short_id and $url = Url::findByCode($request->short_id)) {
-            return redirect($url->original_url);
+        if ($request->is("$default/*") and $request->short_id and $url = (new Shortener)->getUrl($request->short_id)) {
+            return redirect($url);
         }
 
         return $next($request);

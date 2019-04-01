@@ -20,12 +20,12 @@ class Url extends Model
         return self::whereOriginalUrl(base64_encode($_url))->latest()->first();
     }
 
-    public function setOriginalUrl($value)
+    public function setOriginalUrlAttribute($value)
     {
         $this->attributes['original_url'] = base64_encode($value);
     }
 
-    public function getOriginalUrl($value)
+    public function getOriginalUrlAttribute($value)
     {
         return base64_decode($value);
     }
