@@ -38,21 +38,21 @@ return [
      * shortuuid - https://github.com/pascaldevink/shortuuid
      * hashids - https://github.com/ivanakimov/hashids.php
      */
-    'algorithm' => 'shortuuid',
+    'algorithm' => env('SHORT_URL_ALGO', 'shortuuid'),
 
     /*
-     * It will be used for creating hash from algorithm. You can generate API KEY
-     * or use project name. It must be unique and unchangable after first instalation
+     * It can be any string.
+     * NOTE: Do not change after initial setup
      */
-    'algorithm_hash' => 'My Project',
+    'algorithm_hash' => env('SHORT_URL_HASH', ''),
 
     /*
      * Minimum number of characters in short link
      */
-    'min_min_symbols' => 0,
+    'min_symbols' => env('SHORT_URL_MIN_SYMBOLS', 0),
 
     /*
      * Domain url of the short link
      */
-    'app_url' => env('APP_URL', 'http://localhost'),
+    'app_url' => env('SHORT_URL_LINK', env('APP_URL', 'http://localhost')),
 ];
