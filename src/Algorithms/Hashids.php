@@ -14,7 +14,10 @@ class Hashids
 
     public function __construct()
     {
-        $this->hashids = new Alg(config('url_shortener.algorithm_hash'));
+        $salt = config('url_shortener.algorithm_hash', '');
+        $min = config('url_shortener.min_symbols', 0);
+
+        $this->hashids = new Alg($salt, $min);
     }
 
     public function createRecord($_url)
@@ -29,7 +32,7 @@ class Hashids
 
     public function getRecord($code)
     {
-        $id = $this->hashids->decode($code);
+        $id = $this->hashids->decode($code)[0] ?? null;
 
         return Url::find($id);
     }

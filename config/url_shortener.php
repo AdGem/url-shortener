@@ -45,4 +45,14 @@ return [
      * or use project name. It must be unique and unchangable after first instalation
      */
     'algorithm_hash' => 'My Project',
+
+    /*
+     * Minimum number of characters in short link
+     */
+    'min_min_symbols' => 0,
+
+    /*
+     * Domain url of the short link
+     */
+    'app_url' => env('APP_URL', 'http://localhost'),
 ];

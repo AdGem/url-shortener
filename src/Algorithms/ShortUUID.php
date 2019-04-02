@@ -12,7 +12,7 @@ class ShortUUID
 {
     public function createRecord($_url)
     {
-        return $url = Url::create([
+        return Url::create([
             'original_url' => $_url,
             'code' => Alg::uuid1(),
         ]);

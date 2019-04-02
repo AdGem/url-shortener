@@ -19,7 +19,7 @@ class UrlShortener
         $default = config('url_shortener.default_url_path');
 
         if ($request->is("$default/*") and $request->short_id and $url = (new Shortener)->getUrl($request->short_id)) {
-            return redirect($url);
+            return redirect()->to($url);
         }
 
         return $next($request);

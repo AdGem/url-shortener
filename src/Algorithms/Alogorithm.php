@@ -20,6 +20,6 @@ class Algorithm
             return (new Hashids);
         }
 
-        return null;
+        throw new \Exception("[UrlShortener] There is no valid algorithm!", 1);
     }
 }
