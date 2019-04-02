@@ -15,6 +15,10 @@ class UrlShortenerSeviceProvider extends ServiceProvider
 
         // Publish all configs and migrations
         $this->publish();
+
+        $this->commands([
+            \QEDTeam\UrlShortener\Commands\TruncateShortUrl::class,
+        ]);
     }
 
     public function register()
