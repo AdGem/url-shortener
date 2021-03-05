@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  *
  */
-class UrlShortenerSeviceProvider extends ServiceProvider
+class UrlShortenerServiceProvider extends ServiceProvider
 {
     public function boot()
     {
