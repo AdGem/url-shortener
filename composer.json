@@ -1,12 +1,21 @@
 {
-    "name": "qedteam/url-shortener",
+    "name": "adgem/url-shortener",
     "description": "Laravel package for shortening urls - local driver",
     "type": "library",
     "require": {
-        "pascaldevink/shortuuid": "^2.1",
-        "hashids/hashids": "^3.0"
+        "hashids/hashids": "^4.1"
+    },
+    "require-dev": {
+        "php": "^8.0",
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^7.0",
+        "mockery/mockery": "^1.4"
     },
     "authors": [
+        {
+            "name": "AdAction - AdGem Team",
+            "email": "developers@adaction.com"
+        },
         {
             "name": "Anto Čabraja",
             "email": "cabraja.anto@gmail.com"
