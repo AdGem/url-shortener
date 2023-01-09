@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "QEDTeam\\UrlShortener\\": "src/"
+            "AdGem\\UrlShortener\\": "src/"
         }
     }
 }

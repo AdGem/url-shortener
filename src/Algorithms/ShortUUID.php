@@ -1,8 +1,8 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Algorithms;
+namespace AdGem\UrlShortener\Algorithms;
 
-use QEDTeam\UrlShortener\Url;
+use AdGem\UrlShortener\Url;
 use PascalDeVink\ShortUuid\ShortUuid as Alg;
 
 /**

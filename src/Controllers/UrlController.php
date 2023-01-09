@@ -1,6 +1,6 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Controllers;
+namespace AdGem\UrlShortener\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
