@@ -1,9 +1,9 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Middleware;
+namespace AdGem\UrlShortener\Middleware;
 
 use Closure;
-use QEDTeam\UrlShortener\Shortener;
+use AdGem\UrlShortener\Shortener;
 
 class UrlShortener
 {

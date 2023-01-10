@@ -1,9 +1,9 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Commands;
+namespace AdGem\UrlShortener\Commands;
 
 use Illuminate\Console\Command;
-use QEDTeam\UrlShortener\Url;
+use AdGem\UrlShortener\Url;
 
 class TruncateShortUrl extends Command
 {
