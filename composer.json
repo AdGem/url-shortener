@@ -1,5 +1,5 @@
 {
-    "name": "qedteam/url-shortener",
+    "name": "adgem/url-shortener",
     "description": "Laravel package for shortening urls - local driver",
     "type": "library",
     "require": {
@@ -8,13 +8,13 @@
     },
     "authors": [
         {
-            "name": "Anto Čabraja",
-            "email": "cabraja.anto@gmail.com"
+            "name": "AdAction Interactive Development Team",
+            "email": "developers@adaction.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "QEDTeam\\UrlShortener\\": "src/"
+            "AdGem\\UrlShortener\\": "src/"
         }
     }
 }

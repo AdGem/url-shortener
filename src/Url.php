@@ -1,6 +1,6 @@
 <?php
 
-namespace QEDTeam\UrlShortener;
+namespace AdGem\UrlShortener;
 
 use Illuminate\Database\Eloquent\Model;
 

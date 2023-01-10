@@ -1,6 +1,6 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Providers;
+namespace AdGem\UrlShortener\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -17,7 +17,7 @@ class UrlShortenerServiceProvider extends ServiceProvider
         $this->publish();
 
         $this->commands([
-            \QEDTeam\UrlShortener\Commands\TruncateShortUrl::class,
+            \AdGem\UrlShortener\Commands\TruncateShortUrl::class,
         ]);
     }
 

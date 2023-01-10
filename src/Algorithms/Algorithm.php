@@ -1,6 +1,6 @@
 <?php
 
-namespace QEDTeam\UrlShortener\Algorithms;
+namespace AdGem\UrlShortener\Algorithms;
 
 /**
  *
