@@ -7,7 +7,7 @@
         "hashids/hashids": "^4.1"
     },
     "require-dev": {
-        "php": "^8.0",
+        "php": "^8.1",
         "phpunit/phpunit": "^9.0",
         "orchestra/testbench": "^7.0",
         "mockery/mockery": "^1.4"
