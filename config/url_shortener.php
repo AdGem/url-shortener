@@ -35,10 +35,9 @@ return [
     'always_new' => false,
 
     /*
-     * shortuuid - https://github.com/pascaldevink/shortuuid
      * hashids - https://github.com/ivanakimov/hashids.php
      */
-    'algorithm' => env('SHORT_URL_ALGO', 'shortuuid'),
+    'algorithm' => env('SHORT_URL_ALGO', 'hashids'),
 
     /*
      * It can be any string.

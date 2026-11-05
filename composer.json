@@ -3,7 +3,6 @@
     "description": "Laravel package for shortening urls - local driver",
     "type": "library",
     "require": {
-        "pascaldevink/shortuuid": "^3.0",
         "hashids/hashids": "^4.1"
     },
     "require-dev": {
